@@ -1,0 +1,205 @@
+---
+title: "Proyecto integrador"
+author: "Karen Castillo Brito"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Problemas de anualidades vencidas
+
+## Problemas de valor futuro vencido
+
+### Problema 1
+
+Una persona desea ahorrar $500.00 cada fin de quincena durante 40 años. Si el fondo de inversión paga una tasa de rendimiento de 7.5% ¿Cuánto dinero tendrá ahorrado al final de su proyecto financiero?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion VFVenc
+VFVenc(500, 40*24, 0.075/24)
+```
+
+### Problema 2
+
+Una persona desea acumular $3,038,688.00. Si el fondo de inversión paga una tasa de rendimiento de 7.5%¿Cuánto dinero debe ahorrar cada fin de quincena durante 40 años?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PagoVFVenc
+PagoVFVenc(3038688, 40*24, 0.075/24)
+```
+
+### Problema 3
+
+Una persona desea acumular $3,038,688.00. Si abona cada fin de quincena $500.00 por 40 años ¿De cuánto debe ser la tasa de interés?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion TasaVFVenc
+TasaVFVenc(3038688, 500, 40*24)
+```
+
+### Problema 4
+
+Una persona desea acumular $3,038,688.00. Si abona cada fin de quincena $500.00 a una tasa de 7.5% ¿Cuánto tiempo pasará hasta acumular su monto?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PeriodosVFVenc
+PeriodosVFVenc(3038688, 500, 0.075/24)
+```
+
+## Problemas de valor actual vencido
+
+### Problema 1
+
+Una persona paga al final de cada quincena $450.00 durante 2 años. Si la tienda departamental le cobra un 11% de interés ¿Cuánto le prestaron?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion VAVenc
+VAVenc(450, 2*24, 0.11/24)
+```
+
+### Problema 2
+
+Una persona debe $19,349.45. Si la tienda departamental le cobra 11% de interés durante 2 años ¿Cuánto abona al final de cada quincena?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PagoVAVenc
+PagoVAvenc(19349.45, 2*24, 0.11/24)
+```
+
+### Problema 3
+
+Una persona debe $19,349.45. Si abona $450.00 al final de cada quincena durante 2 años ¿Cuánto es la tasa de interés que cobra la tienda departamental?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion TasaVAVenc
+TasaVAVenc(19349.45, 450, 2*24)
+```
+
+### Problema 4
+
+Una persona debe $19,349.45. Si abona $450.00 al final de cada quincena a una tasa de 11% ¿En cuánto tiempo terminará de pagar?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PeriodosVAVenc
+PeriodosVAVenc(19349.45, 450, 0.11/24)
+```
+
+# Problemas de anualidades anticipadas
+
+## Problemas de Valor futuro anticipado
+
+### Problema 1
+
+Una persona desea ahorrar $500.00 cada inicio de quincena durante 40 años. Si el fondo de inversión paga una tasa de rendimiento de 7.5% ¿Cuánto dinero tendrá ahorrado al final de su proyecto financiero?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion VFAnt
+VFAnt(500, 40*24, 0.075/24)
+```
+
+### Problema 2
+
+Una persona desea acumular $3,048,184.00. Si el fondo de inversión paga una tasa de rendimiento de 7.5%¿Cuánto dinero debe ahorrar cada inicio de quincena durante 40 años?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PagoVFAnt
+PagoVFAnt(3048184, 40*24, 0.075/24)
+```
+
+### Problema 3
+
+Una persona desea acumular $3,048,184.00. Si abona cada inicio de quincena $500.00 por 40 años ¿De cuánto debe ser la tasa de interés?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion TasaVFAnt
+TasaVFAnt(3048184, 500, 40*24)
+```
+
+### Problema 4
+
+Una persona desea acumular $3,048,184.00. Si abona cada inicio de quincena $500.00 a una tasa de 7.5% ¿Cuánto tiempo pasará hasta acumular su monto?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PeriodosVFAnt
+PeriodosVFAnt(3048184, 500, 0.075/24)
+```
+
+## Problemas de valor actual anticipado
+
+### Problema 1
+
+Una persona paga al inicio de cada quincena $450.00 durante 2 años. Si la tienda departamental le cobra un 11% de interés ¿Cuánto le prestaron?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion VAAnt
+VAAnt(450, 2*24, 0.11/24)
+```
+
+### Problema 2
+
+Una persona debe $19,438.13. Si la tienda departamental le cobra 11% de interés durante 2 años ¿Cuánto abona al inicio de cada quincena?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PagoVAAnt
+PagoVAAnt(19438.13, 2*24, 0.11/24)
+```
+
+### Problema 3
+
+Una persona debe $19,438.13. Si abona $450.00 al inicio de cada quincena durante 2 años ¿Cuánto es la tasa de interés que cobra la tienda departamental?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion TasaVAAnt
+TasaVAAnt(19438.13, 450, 2*24)
+```
+
+### Problema 4
+
+Una persona debe $19,438.13. Si abona $450.00 al inicio de cada quincena a una tasa de 11% ¿En cuánto tiempo terminará de pagar?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PeriodosVAAnt
+PeriodosVAAnt(19438.13, 450, 0.11/24)
+```
+
+# Problemas de anualidades diferidas con pagos vencidos
+
+## Valor actual vencido
+
+¿Cuánto le prestaron si comienza a pagar 3 meses después de adquirido el financiamiento?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion VADif
+VADif(450, 2*24, 0.11/24, 24/4)
+```
+
+## Monto de pago vencido
+
+¿De cuánto es el abono quincenal de su préstamo de $18,825.77 a 11% de tasa de interés por 2 años si lo empieza a pagar 3 meses después?
+
+```{r}
+source("https://raw.githubusercontent.com/KarenCastilloBrito/Proyecto-integrador-1/main/funcionesAnualidades.R")
+#Corremos la funcion PagoVADif
+PagoVADif(18825.77, 2*24, 0.11/24, 1*24/4)
+```
+
